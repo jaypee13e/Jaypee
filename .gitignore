@@ -1,0 +1,13 @@
+node_modules
+dist
+.env
+server/data
+.wrangler
+.dev.vars
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+*.zip

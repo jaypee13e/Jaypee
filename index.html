@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>Jaypee – Freelance Web Developer (3D Portfolio)</title>
+
+    <meta name="description"
+        content="Jaypee is a freelance web developer in the Philippines building responsive, professional business websites. Browse projects in 3D and request a quote.">
+    <meta name="theme-color" content="#04070d">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:title" content="Jaypee – Freelance Web Developer">
+
+    <meta property="og:description"
+        content="Freelance web developer in the Philippines building responsive, professional business websites. Browse projects in 3D and request a quote.">
+
+    <meta property="og:image" content="https://YOUR-SITE-URL/assets/jaypee.png">
+
+    <meta property="og:url" content="https://YOUR-SITE-URL/">
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%2304070d%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-size=%2728%27 font-family=%27monospace%27 font-weight=%27700%27 text-anchor=%27middle%27 fill=%27%2339e0ff%27%3EJP%3C/text%3E%3C/svg%3E">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+    <div id="bar"></div>
+    <canvas id="gl" aria-hidden="true"></canvas>
+
+    <header>
+        <a class="logo" href="#hero">
+            <i>JP</i>Jaypee
+        </a>
+
+        <nav id="nav">
+            <a href="#work">Projects</a>
+            <a href="#services">Services</a>
+            <a href="#process">Process</a>
+            <a href="#pricing">Packages</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button id="mb" aria-expanded="false">Menu</button>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="s" id="hero">
+            <p class="kick">
+                <b></b>
+                Jaypee / freelance web developer 
+            </p>
+
+            <h1>I Build Websites for Businesses of All Sizes.</h1>
+
+            <p class="lede">
+                I create modern, responsive, and professional websites that help
+                businesses showcase their services, reach more customers, and grow
+                their online presence — whether you're a small startup or an
+                established company.
+            </p>
+
+            <p>
+                <span class="glass">Open to freelance and full-time work</span>
+            </p>
+
+            <p>
+                <a class="btn" href="#work">View My Projects</a>
+                <a class="btn alt" href="#contact">Let's Build Your Website</a>
+            </p>
+
+            <div class="stats">
+                <div>
+                    <b>10</b>
+                    Projects
+                </div>
+
+                <div>
+                    <b>2024</b>
+                    Building since
+                </div>
+
+                <div>
+                    <b>React · Node</b>
+                    Stack
+                </div>
+            </div>
+
+            <p class="hint">
+                Drag to look around the room · scroll to explore
+            </p>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="s" id="work">
+            <h2>Projects</h2>
+
+            <p class="sub">
+                Selected work. These are portfolio demos built to show what I can
+                make; they are not real client sites. Click a panel, use the arrows
+                or pick a tab.
+            </p>
+
+            <div id="tabs" role="tablist"></div>
+
+            <div class="glass" id="info"></div>
+
+            <div class="ctl">
+                <button id="pv" aria-label="Previous project">←</button>
+                <span id="ct"></span>
+                <button id="nx" aria-label="Next project">→</button>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="s" id="services">
+            <h2>Services</h2>
+
+            <p class="sub">What you can hire me to build.</p>
+
+            <div class="grid">
+                <div class="glass">
+                    <h3>Business Website Development</h3>
+                    <p>
+                        Professional websites that introduce your business, showcase
+                        your services, share company information, and help customers
+                        get in touch.
+                    </p>
+                </div>
+
+                <div class="glass">
+                    <h3>Landing Page Development</h3>
+                    <p>
+                        Focused landing pages for businesses, products, services,
+                        and promotional campaigns.
+                    </p>
+                </div>
+
+                <div class="glass">
+                    <h3>Product Showcase Websites</h3>
+                    <p>
+                        Websites that display products, images, descriptions, and
+                        contact or ordering information.
+                    </p>
+                </div>
+
+                <div class="glass">
+                    <h3>Website Redesign</h3>
+                    <p>
+                        Improvements to the design, layout, usability, and
+                        responsiveness of an existing website.
+                    </p>
+                </div>
+
+                <div class="glass">
+                    <h3>Website Maintenance</h3>
+                    <p>
+                        Content updates, minor bug fixes, and other small
+                        maintenance tasks.
+                    </p>
+                </div>
+            </div>
+
+            <p style="margin-top: 18px">
+                <a class="btn" href="#contact">Discuss Your Project</a>
+            </p>
+        </section>
+
+        <!-- Process Section -->
+        <section class="s" id="process">
+            <h2>How I work</h2>
+
+            <p class="sub">Four steps from first message to launch.</p>
+
+            <div class="grid">
+                <div class="glass">
+                    <h3>01 Discovery</h3>
+                    <p>
+                        I learn about your business, goals, target customers, and
+                        what the website needs to do.
+                    </p>
+                </div>
+
+                <div class="glass">
+                    <h3>02 Planning and Design</h3>
+                    <p>
+                        I plan the website structure, layout, and visual appearance.
+                    </p>
+                </div>
+
+                <div class="glass">
+                    <h3>03 Development</h3>
+                    <p>
+                        I build the website and test its features and how it looks
+                        on different screen sizes.
+                    </p>
+                </div>
+
+                <div class="glass">
+                    <h3>04 Review and Launch</h3>
+                    <p>
+                        We review the finished website together, make the agreed
+                        revisions, and prepare it for launch.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="s" id="pricing">
+            <h2>Website packages</h2>
+
+            <p class="sub">
+                Final price depends on your project's scope and the features you
+                need, so every quote is based on a short conversation.
+            </p>
+
+            <div class="grid">
+                <div class="glass">
+                    <h3>Starter Website</h3>
+
+                    <ul>
+                        <li>A simple landing page</li>
+                        <li>Responsive design</li>
+                        <li>Essential business information</li>
+                        <li>Contact options</li>
+                    </ul>
+
+                    <a class="btn alt" href="#contact" data-t="Landing page">
+                        Request a Quote
+                    </a>
+                </div>
+
+                <div class="glass">
+                    <h3>Business Website</h3>
+
+                    <ul>
+                        <li>Multiple pages or sections as required</li>
+                        <li>Services or product showcase</li>
+                        <li>Contact or inquiry options</li>
+                        <li>Responsive design</li>
+                    </ul>
+
+                    <a class="btn alt" href="#contact" data-t="Business website">
+                        Request a Quote
+                    </a>
+                </div>
+
+                <div class="glass">
+                    <h3>Custom Website</h3>
+
+                    <ul>
+                        <li>Features based on your needs</li>
+                        <li>Custom layout and functionality</li>
+                        <li>Scope set after we discuss requirements</li>
+                    </ul>
+
+                    <a class="btn alt" href="#contact" data-t="Custom website">
+                        Request a Quote
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Work With Me Section -->
+        <section class="s" id="why">
+            <h2>Why work with me</h2>
+
+            <p class="sub">What you can expect on every project.</p>
+
+            <div class="grid">
+                <div class="glass">
+                    <h3>Works on every screen</h3>
+                    <p>
+                        Responsive layouts that I check on different screen sizes.
+                    </p>
+                </div>
+
+                <div class="glass">
+                    <h3>Easy to use</h3>
+                    <p>
+                        User-friendly layouts, so customers can find what they need.
+                    </p>
+                </div>
+
+                <div class="glass">
+                    <h3>Organized code</h3>
+                    <p>
+                        Clean, readable code that is easier to update later.
+                    </p>
+                </div>
+
+                <div class="glass">
+                    <h3>Attention to detail</h3>
+                    <p>
+                        Spacing, text, links, and forms get checked before launch.
+                    </p>
+                </div>
+
+                <div class="glass">
+                    <h3>Clear communication</h3>
+                    <p>
+                        You hear from me throughout development, not just at the end.
+                    </p>
+                </div>
+
+                <div class="glass">
+                    <h3>Built around your needs</h3>
+                    <p>
+                        Features are chosen for your project, not copied from a
+                        template.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="s" id="stack">
+            <h2>Skills</h2>
+
+            <p class="sub">What I use, based on the projects above.</p>
+
+            <div class="grid">
+                <div class="glass">
+                    <h3>Front end</h3>
+                    <p>
+                        Semantic HTML, modern CSS, JavaScript, and React with Vite.
+                        Responsive layouts that work with a keyboard.
+                    </p>
+                </div>
+
+                <div class="glass">
+                    <h3>Back end</h3>
+                    <p>
+                        Node.js and Express, Firestore, and image uploads with
+                        Cloudinary. Android packaging with Capacitor.
+                    </p>
+                </div>
+
+                <div class="glass">
+                    <h3>Quality</h3>
+                    <p>
+                        Responsive design, form validation, accessibility basics,
+                        browser testing and debugging, and Git and GitHub.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="s" id="reviews">
+            <h2>Clients &amp; reviews</h2>
+
+            <p class="sub">
+                Reviews are checked by me before they appear. Nothing is published
+                automatically.
+            </p>
+
+            <div class="grid" id="rv-list"></div>
+
+            <p class="sub" id="rv-empty" hidden>
+                No public reviews yet. If you've worked with me, I'd be glad to hear
+                how it went.
+            </p>
+
+            <form id="review" class="glass fm">
+                <h3>Worked with me? Leave a review</h3>
+
+                <div class="fg">
+                    <label>
+                        Your name
+                        <input name="name" required>
+                    </label>
+
+                    <label>
+                        Email (not shown)
+                        <input name="email" type="email" required>
+                    </label>
+
+                    <label>
+                        Business (optional)
+                        <input name="business">
+                    </label>
+
+                    <label>
+                        What did I build?
+                        <input name="work" required>
+                    </label>
+
+                    <label>
+                        Rating
+                        <select name="rating">
+                            <option value="5">5 – Excellent</option>
+                            <option value="4">4 – Very good</option>
+                            <option value="3">3 – Good</option>
+                            <option value="2">2 – Fair</option>
+                            <option value="1">1 – Poor</option>
+                        </select>
+                    </label>
+                </div>
+
+                <label>
+                    Your review
+                    <textarea name="quote" rows="4" required></textarea>
+                </label>
+
+                <label class="ck">
+                    <input type="checkbox" name="consent" required>
+                    I agree my name, business and review may be shown on this website.
+                </label>
+
+                <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <button class="btn" type="submit">Send review</button>
+
+                <p class="st" role="status"></p>
+            </form>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="s" id="contact">
+            <h2>Let's Build Something Great Together.</h2>
+
+            <p class="sub">
+                Have a website idea for your business? Whether you're starting small
+                or managing an established company, I'd love to hear about your
+                project.
+            </p>
+
+            <a class="mail" id="mail" href="mailto:Jaypoem0@gmail.com?subject=Website%20project%20inquiry">
+                Jaypoem0@gmail.com
+            </a>
+
+            <p>
+                <a class="btn" id="inq" href="mailto:Jaypoem0@gmail.com?subject=Website%20project%20inquiry">
+                    Start a Project
+                </a>
+
+                <a class="btn alt" href="#inquiry" data-discovery>
+                    Book a Discovery Call
+                </a>
+
+                <button class="btn alt" id="copy">Copy email</button>
+
+                <a class="btn alt" href="https://github.com/jaypee13e" target="_blank" rel="noopener">
+                    GitHub
+                </a>
+            </p>
+
+            <form id="inquiry" class="glass fm">
+                <h3>Project inquiry</h3>
+
+                <div class="fg">
+                    <label>
+                        Name
+                        <input name="name" autocomplete="name" required>
+                    </label>
+
+                    <label>
+                        Email
+                        <input name="email" type="email" autocomplete="email" required>
+                    </label>
+
+                    <label>
+                        Website type
+                        <select name="type">
+                            <option>Business website</option>
+                            <option>Landing page</option>
+                            <option>Custom website</option>
+                            <option>Product showcase website</option>
+                            <option>Website redesign</option>
+                            <option>Website maintenance</option>
+                            <option>Discovery call</option>
+                            <option>Not sure yet</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Budget 
+                        <span name="budget">
+                            <select name="currency" aria-label="currency">
+                                <option value="PHP">₱ PHP</option>
+                                <option value="USD">$ USD</option>
+                            </select>
+                            <input name="budget" type="number" min="0" inputmode="decimal" placeholder="e.g. 5000" required>
+                    </label>
+                </div>
+
+                <label>
+                    Project description
+                    <textarea name="message" rows="4" required></textarea>
+                </label>
+
+                <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <button class="btn" type="submit">Send inquiry</button>
+
+                <p class="st" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <span>
+            © 2026 Jaypee.
+        </span>
+
+        <a href="#hero">Back to top ↑</a>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

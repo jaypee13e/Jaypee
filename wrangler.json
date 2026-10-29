@@ -1,0 +1,16 @@
+{
+  "name": "jaypee-3d-portfolio",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*"]
+  },
+  "kv_namespaces": [
+    {
+      "binding": "REVIEWS",
+      "id": "d431fd624f244d698a6347aee4ae3358"
+    }
+  ]
+}
